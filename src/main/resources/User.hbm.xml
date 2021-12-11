@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="by.ishangulyev.kursovaya.entity.User" table="user" schema="kurs">
+        <id name="id">
+            <column name="id" sql-type="int"/>
+            <generator class="increment"/>
+        </id>
+        <property name="username">
+            <column name="username" sql-type="varchar(16)" length="16"/>
+        </property>
+        <property name="email">
+            <column name="email" sql-type="varchar(255)" not-null="true"/>
+        </property>
+        <property name="password">
+            <column name="password" sql-type="varchar(32)" length="32"/>
+        </property>
+        <property name="createTime">
+            <column name="create_time" sql-type="date" not-null="true"/>
+        </property>
+        <property name="roleId">
+            <column name="roleID" sql-type="int" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
