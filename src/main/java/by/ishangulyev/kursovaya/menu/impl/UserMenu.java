@@ -40,13 +40,13 @@ public class UserMenu extends Menu
     @Override
     public void showMenu()
     {
-        System.out.println("\n1)Gadgets");
+        System.out.println("\n1)Гаджеты");
         if(isAdmin())
-            System.out.println("2)Users");
-        System.out.println("7)Show your cart");
-        System.out.println("8)Show your account info");
-        System.out.println("9)Back" +
-                "\n0)Exit");
+            System.out.println("2)Пользователи");
+        System.out.println("7)Показать список покупок");
+        System.out.println("8)Показать информацию об аккаунте");
+        System.out.println("9)Вернуться" +
+                "\n0)Выход");
     }
 
     @Override
@@ -78,11 +78,11 @@ public class UserMenu extends Menu
                     return new RegistrationMenu(new User());
                 }
                 case "0" -> {
-                    System.out.println("See you next time");
+                    System.out.println("Пока");
                     exit();
                 }
                 default -> {
-                    System.out.println("Try again");
+                    System.out.println("Постарайтесь снова");
                     showMenu();
                 }
             }
@@ -94,7 +94,7 @@ public class UserMenu extends Menu
     {
         showAccInfo();
         getAllInfo();
-        System.out.println("Gadgets: { ");
+        System.out.println("Товары: { ");
         List<Gadget> list = findGadgets(findOrderID(findCartID()));
         for (Gadget i: list)
         {

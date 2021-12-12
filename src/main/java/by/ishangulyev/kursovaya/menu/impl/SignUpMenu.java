@@ -33,12 +33,12 @@ public class SignUpMenu extends Menu
     @Override
     public Menu nextMenu(User user)
     {
-        System.out.println("Sign up");
-        System.out.println("Email:");
+        System.out.println("Регистрация");
+        System.out.println("Почта:");
         user.setEmail(scanner.nextLine());
-        System.out.println("Password:");
+        System.out.println("Пароль:");
         user.setPassword(scanner.nextLine());
-        System.out.println("Name:");
+        System.out.println("Имя пользователя:");
         user.setUsername(scanner.nextLine());
         saveUser();
         saveCart();

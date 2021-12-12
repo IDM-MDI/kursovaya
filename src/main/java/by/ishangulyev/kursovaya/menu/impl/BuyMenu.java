@@ -42,8 +42,8 @@ public class BuyMenu extends Menu
     public void showMenu()
     {
         menu.showGadgets();
-        System.out.println("Choice which shoes u should buy");
-        System.out.println("0)Back");
+        System.out.println("Выберите гаджет который вы хотите купить");
+        System.out.println("0)Вернуться");
     }
 
     @Override
@@ -67,7 +67,7 @@ public class BuyMenu extends Menu
                     }
                     else
                     {
-                        System.out.println("Try again");
+                        System.out.println("Постарайтесь снова");
                         continue;
                     }
                 }

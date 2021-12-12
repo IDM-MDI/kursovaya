@@ -20,7 +20,7 @@ public class RegistrationMenu extends Menu
     @Override
     public void showMenu()
     {
-        System.out.println("1)Sign in\n2)Sign up\n0)Exit");
+        System.out.println("1)Войти\n2)Регистрация\n0)Выход");
     }
 
     @Override
@@ -39,11 +39,11 @@ public class RegistrationMenu extends Menu
                     return new SignUpMenu(this.user);
                 }
                 case "0" -> {
-                    System.out.println("Bye");
+                    System.out.println("Пока");
                     exit();
                 }
                 default -> {
-                    System.out.println("Try again");
+                    System.out.println("Постарайтесь снова");
                     continue;
                 }
             }

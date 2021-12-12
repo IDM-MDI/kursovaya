@@ -38,10 +38,10 @@ public class SignInMenu extends Menu
     @Override
     public Menu nextMenu(User user)
     {
-        System.out.println("Sign in");
-        System.out.println("Email:");
+        System.out.println("Вход");
+        System.out.println("Почта:");
         login = scanner.nextLine();
-        System.out.println("Password:");
+        System.out.println("Пароль:");
         password = scanner.nextLine();
         getUserFrom();
 

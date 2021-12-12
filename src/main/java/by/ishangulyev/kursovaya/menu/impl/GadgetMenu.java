@@ -44,17 +44,17 @@ public class GadgetMenu extends Menu
     @Override
     public void showMenu()
     {
-        System.out.println("1)Show all gadgets");
-        System.out.println("2)Show gadget");
+        System.out.println("1)Показать все гаджеты");
+        System.out.println("2)Показать определенный гаджет");
         if(isAdmin())
         {
-            System.out.println("3)Add gadget" +
-                            "\n4)Update gadget" +
-                            "\n5)Delete gadget" +
-                            "\n6)Add material");
+            System.out.println("3)Добавить гаджет" +
+                            "\n4)Обновить гаджет" +
+                            "\n5)Удалить гаджет" +
+                            "\n6)Добавить характеристики");
         }
-        System.out.println("9)Back" +
-                "\n0)Exit");
+        System.out.println("9)Вернуться" +
+                "\n0)Выход");
     }
 
     @Override
@@ -120,11 +120,11 @@ public class GadgetMenu extends Menu
                     return new UserMenu(this.user);
                 }
                 case "0" -> {
-                    System.out.println("See you next time");
+                    System.out.println("Пока");
                     exit();
                 }
                 default -> {
-                    System.out.println("Try again");
+                    System.out.println("Постарайтесь снова");
                     continue;
                 }
             }

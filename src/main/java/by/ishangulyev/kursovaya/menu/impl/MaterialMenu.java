@@ -30,12 +30,12 @@ public class MaterialMenu extends Menu
     @Override
     public void showMenu()
     {
-        System.out.println("1)Add CPU\n" +
-                            "2)Add Memory\n" +
-                            "3)Add Battery\n" +
-                            "4)Add Video\n" +
-                            "5)Add Audio\n" +
-                            "9)Back");
+        System.out.println("1)Добавить Процессор\n" +
+                            "2)Добавить Память\n" +
+                            "3)Добавить Батарею\n" +
+                            "4)Добавить Экран\n" +
+                            "5)Добавить Звук\n" +
+                            "9)Вернуться");
     }
 
     @Override
@@ -71,7 +71,7 @@ public class MaterialMenu extends Menu
                     return new UserMenu(this.user);
                 }
                 default -> {
-                    System.out.println("Try again");
+                    System.out.println("Постарайтесь снова");
                     continue;
                 }
             }
