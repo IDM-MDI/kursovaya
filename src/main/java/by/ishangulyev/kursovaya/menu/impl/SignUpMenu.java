@@ -17,6 +17,9 @@ public class SignUpMenu extends Menu
     private User user;
     private SessionFactory factory;
     private StandardServiceRegistry registry;
+    private final String EMAIL_REGEX = "[a-zA-Z0-9]+@(gmail|mail|yandex)\\.(com|ru|org)";
+    private String input;
+
     public SignUpMenu(User user)
     {
         registry = new StandardServiceRegistryBuilder().configure().build();
@@ -35,6 +38,12 @@ public class SignUpMenu extends Menu
     {
         System.out.println("Регистрация");
         System.out.println("Почта:");
+        input = scanner.nextLine();
+        if(!input.matches(EMAIL_REGEX))
+        {
+            System.out.println("Неверное указание почты");
+            return new RegistrationMenu(new User());
+        }
         user.setEmail(scanner.nextLine());
         System.out.println("Пароль:");
         user.setPassword(scanner.nextLine());

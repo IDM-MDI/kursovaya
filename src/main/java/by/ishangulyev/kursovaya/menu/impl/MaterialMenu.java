@@ -122,6 +122,7 @@ public class MaterialMenu extends Menu
         }
         else
         {
+            System.out.println("Указанное вами строка не является цифрой");
             result = null;
         }
 

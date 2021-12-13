@@ -51,6 +51,7 @@ public class SignInMenu extends Menu
         }
         else
         {
+            System.out.println("Данные не корректны");
             return new RegistrationMenu(this.user);
         }
     }
